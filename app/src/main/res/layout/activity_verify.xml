@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/llBackground">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/back"/>
+
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/ll_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/iv_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/lock"/>
+
+        <TextView
+            android:id="@+id/tv_trashiness1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请确认主密码"
+            android:layout_toRightOf="@+id/iv_lock"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/tv_trashiness2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register_describe2"
+            android:layout_below="@id/tv_trashiness1"
+            android:layout_toRightOf="@+id/iv_lock"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_verify"
+                android:gravity="center"
+                android:background="@null"
+                android:inputType="textPassword"
+                android:hint="确认您的主密码"
+                android:layout_margin="3dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"/>
+
+            <Button
+                android:id="@+id/btn_verify"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:background="@drawable/btn_background"
+                android:text="确认"/>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

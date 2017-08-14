@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    
+    <style name="SwitchTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorAccent">@color/textColorNormal</item>
+    </style>
+
+
+    <style name="FloatingTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorAccent">@color/floatBtnColor</item>
+    </style>
+
+    <style name="Transparent" parent="Theme.AppCompat.Light">
+        <item name="android:windowIsTranslucent">true</item><!--透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item> <!--activity出现动画-->
+    </style>
+
+</resources>

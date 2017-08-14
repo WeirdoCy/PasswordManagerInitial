@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/iv_lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/lock"/>
+
+    <TextView
+        android:id="@+id/tv_trashiness1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_describe1"
+        android:layout_toRightOf="@+id/iv_lock"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/tv_trashiness2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register_describe2"
+        android:layout_below="@id/tv_trashiness1"
+        android:layout_toRightOf="@+id/iv_lock"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_main_password"
+            android:gravity="center"
+            android:background="@null"
+            android:inputType="textPassword"
+            android:hint="@string/in_main_password"
+            android:layout_margin="3dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line"/>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:background="@drawable/btn_background"
+            android:text="下一步"/>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

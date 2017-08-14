@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="example.com.passwordmanagerinitial">
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.OnlyOnceActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.SettingActivity"/>
+
+        <activity android:name=".activity.FloatListActivity" android:theme="@style/Transparent" android:label="选择类型"/>
+        <activity android:name=".activity.RegisterActivity"/>
+        <activity android:name=".activity.LoginActivity"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".activity.VerifyActivity"/>
+        <activity android:name=".activity.AddPasswordActivity"/>
+        <activity android:name=".activity.ShowPasswordActivity"/>
+        <activity android:name=".activity.SearchActivity"/>
+        <activity android:name=".activity.UpdateMainPassActivity"/>
+        <activity android:name=".activity.UpdateAccPassActy"/>
+        <activity android:name=".activity.AuthenticationActivity"/>
+        <activity android:name=".activity.LoginModeActivity"/>
+        <activity android:name=".activity.FingerLoginActivity"/>
+        <activity android:name=".activity.PicLoginActivity"/>
+        <activity android:name=".activity.FaceLoginActivity"/>
+
+    </application>
+
+</manifest>
