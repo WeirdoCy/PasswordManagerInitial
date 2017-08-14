@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //    private AccountListAdapter adapter;
     private MainActivityAdapter adapter;
 
-//    private String account;
+    private String account;
 
     private Cursor cursor;
     private SQLiteDatabase db;
