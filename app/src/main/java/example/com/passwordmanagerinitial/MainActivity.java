@@ -57,14 +57,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private List<PasswordListEntity> mList;
     private List list;
-//    private AccountListAdapter adapter;
     private MainActivityAdapter adapter;
-
-    private String account;
 
     private Cursor cursor;
     private SQLiteDatabase db;
-
 
 
     @Override
