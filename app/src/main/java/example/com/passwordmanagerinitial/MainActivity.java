@@ -113,15 +113,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
                     }
                 }else{
-//                    ParentEntity entity = new ParentEntity();
-//                    Log.d("TAG", "onItemClick: " + entity.getChildren().get(position));
 
-//                    Toast.makeText(context, "you click: " + entity.getChildren().get(position), Toast.LENGTH_SHORT).show();
+                    ParentEntity.ChildEntity child = (ParentEntity.ChildEntity) list.get(position);
+                    Toast.makeText(context, "you click: " + child.getName(), Toast.LENGTH_SHORT).show();
 
-//                    Intent intent = new Intent(context, ShowPasswordActivity.class);
-//                    intent.putExtra("desc",child.getName());
-//                    Log.d("TAG", "onItemClick: " + child.getName());
-//                    startActivity(intent);
+                    Intent intent = new Intent(context, ShowPasswordActivity.class);
+                    intent.putExtra("desc",child.getName());
+                    startActivity(intent);
                 }
             }
         });

@@ -12,7 +12,6 @@
         <item name="colorAccent">@color/textColorNormal</item>
     </style>
 
-
     <style name="FloatingTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorAccent">@color/floatBtnColor</item>
     </style>

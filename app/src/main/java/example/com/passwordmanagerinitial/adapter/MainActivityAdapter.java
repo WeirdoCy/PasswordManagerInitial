@@ -44,11 +44,13 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
             holder.rlChild.setVisibility(View.GONE);
             ParentEntity parentEntity = (ParentEntity) mList.get(position);
             holder.tvParent.setText(parentEntity.getName());
+//            holder.imageView.setImageResource(R.mipmap.right);
         }else{
             holder.rlChild.setVisibility(View.VISIBLE);
             holder.relativeLayout.setVisibility(View.GONE);
             ParentEntity.ChildEntity childEntity = (ParentEntity.ChildEntity) mList.get(position);
             holder.tvChild.setText(childEntity.getName());
+//            holder.imageView.setImageResource(R.mipmap.down);
         }
 
         if (onItemClickListener != null){
@@ -57,8 +59,11 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
                 public void onClick(View v) {
                     int position = holder.getLayoutPosition();
                     onItemClickListener.onItemClick(position);
-                    holder.imageView.setImageResource(R.mipmap.down);
-
+//                    if (holder.relativeLayout.getVisibility() == View.GONE){
+//                        holder.imageView.setImageResource(R.mipmap.down);
+//                    }else{
+//                        holder.imageView.setImageResource(R.mipmap.right);
+//                    }
                 }
             });
             holder.tvChild.setOnClickListener(new View.OnClickListener() {
