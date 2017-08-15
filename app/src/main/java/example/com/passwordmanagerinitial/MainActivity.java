@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private MyDatabaseHelper dbHelper;
 
-    private List<PasswordListEntity> mList;
     private List list;
     private MainActivityAdapter adapter;
 
