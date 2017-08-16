@@ -126,10 +126,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         recyclerView.setAdapter(adapter);
 
-//        if (mList.size() > 0){
-//            linearLayout.setVisibility(View.GONE);
-//            recyclerView.setVisibility(View.VISIBLE);
-//        }
+
         if (list.size() > 0){
             linearLayout.setVisibility(View.GONE);
             recyclerView.setVisibility(View.VISIBLE);

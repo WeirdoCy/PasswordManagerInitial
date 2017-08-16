@@ -40,6 +40,7 @@ public class DataUtil {
         Intent intent = new Intent(context, AuthenticationActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra("account",mList.get(position).getPassDesc());
+        intent.putExtra("whereActy",1);
         context.startActivity(intent);
     }
 

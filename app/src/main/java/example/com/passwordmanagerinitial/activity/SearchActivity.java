@@ -279,21 +279,10 @@ public class SearchActivity extends AppCompatActivity {
                         builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                db.execSQL("delete from Bank where account = ?", new
-                                        String[]{mList.get(position).getPassDesc()});
-                                db.execSQL("delete from webSet where account = ?", new
-                                        String[]{mList.get(position).getPassDesc()});
-                                db.execSQL("delete from Cloud where account = ?", new
-                                        String[]{mList.get(position).getPassDesc()});
-                                db.execSQL("delete from database where account = ?", new
-                                        String[]{mList.get(position).getPassDesc()});
-                                db.execSQL("delete from entertainment where account = ?", new
-                                        String[]{mList.get(position).getPassDesc()});
-                                db.execSQL("delete from often where account = ?", new
-                                        String[]{mList.get(position).getPassDesc()});
-                                db.execSQL("delete from other where account = ?", new
-                                        String[]{mList.get(position).getPassDesc()});
-                                adapter.deleteData(position);
+                                Intent intentToAuth = new Intent(context,AuthenticationActivity.class);
+                                intentToAuth.putExtra("whereActy",3);
+                                intentToAuth.putExtra("passDec",mList.get(position).getPassDesc());
+                                startActivity(intentToAuth);
                             }
                         });
                         builder.setNegativeButton("no", null);

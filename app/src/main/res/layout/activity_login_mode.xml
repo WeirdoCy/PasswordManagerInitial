@@ -6,7 +6,9 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <include layout="@layout/setting_title"/>
+    <example.com.passwordmanagerinitial.view.SettingTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></example.com.passwordmanagerinitial.view.SettingTitleLayout>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"

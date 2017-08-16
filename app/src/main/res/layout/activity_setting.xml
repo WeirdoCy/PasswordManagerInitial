@@ -53,6 +53,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_delete_database"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="删除数据库"

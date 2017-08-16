@@ -21,6 +21,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import example.com.passwordmanagerinitial.R;
+import example.com.passwordmanagerinitial.activity.AuthenticationActivity;
 import example.com.passwordmanagerinitial.activity.ShowPasswordActivity;
 import example.com.passwordmanagerinitial.database.MyDatabaseHelper;
 import example.com.passwordmanagerinitial.entity.SearchListEntity;
@@ -101,14 +102,19 @@ public class SearchActivityAdapter extends RecyclerView.Adapter<SearchActivityAd
                         builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                db.execSQL("delete from Bank where account = ?",new String[]{mList.get(position).getPassDesc()});
-                                db.execSQL("delete from webSet where account = ?",new String[]{mList.get(position).getPassDesc()});
-                                db.execSQL("delete from Cloud where account = ?", new String []{mList.get(position).getPassDesc()});
-                                db.execSQL("delete from database where account = ?",new String[]{mList.get(position).getPassDesc()});
-                                db.execSQL("delete from entertainment where account = ?",new String[]{mList.get(position).getPassDesc()});
-                                db.execSQL("delete from often where account = ?", new String []{mList.get(position).getPassDesc()});
-                                db.execSQL("delete from other where account = ?", new String []{mList.get(position).getPassDesc()});
-                                deleteData(position);
+//                                db.execSQL("delete from Bank where account = ?",new String[]{mList.get(position).getPassDesc()});
+//                                db.execSQL("delete from webSet where account = ?",new String[]{mList.get(position).getPassDesc()});
+//                                db.execSQL("delete from Cloud where account = ?", new String []{mList.get(position).getPassDesc()});
+//                                db.execSQL("delete from database where account = ?",new String[]{mList.get(position).getPassDesc()});
+//                                db.execSQL("delete from entertainment where account = ?",new String[]{mList.get(position).getPassDesc()});
+//                                db.execSQL("delete from often where account = ?", new String []{mList.get(position).getPassDesc()});
+//                                db.execSQL("delete from other where account = ?", new String []{mList.get(position).getPassDesc()});
+//                                deleteData(position);
+                                Intent intentToAuth = new Intent(context,AuthenticationActivity.class);
+                                intentToAuth.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                intentToAuth.putExtra("whereActy",3);
+                                intentToAuth.putExtra("passDec",mList.get(position).getPassDesc());
+                                context.startActivity(intentToAuth);
                             }
                         });
                         builder.setNegativeButton("no",null);
@@ -174,6 +180,5 @@ public class SearchActivityAdapter extends RecyclerView.Adapter<SearchActivityAd
         notifyItemRemoved(position);
 
     }
-
 
 }
