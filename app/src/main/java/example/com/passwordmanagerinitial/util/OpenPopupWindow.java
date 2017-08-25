@@ -30,6 +30,13 @@ public class OpenPopupWindow {
         popupWindow.showAsDropDown(anchor,0,0);
     }
 
+    public void showPopWindow(View anchor, View popView,int width){
+        popupWindow = new PopupWindow(popView, width, 400);
+        popupWindow.setOutsideTouchable(true);
+        popupWindow.setFocusable(true);
+        popupWindow.showAsDropDown(anchor,0,0);
+    }
+
     public void hidePopupWindow(){
         Log.d("TAG", "hidePopupWindow: " + "true");
         if (popupWindow != null){

@@ -43,6 +43,14 @@
             android:layout_centerVertical="true"
             android:scaleType="centerInside"
             android:src="@mipmap/right"/>
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/textColorNormal"/>
     </RelativeLayout>
 
     <RelativeLayout

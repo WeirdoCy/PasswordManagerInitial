@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 import example.com.passwordmanagerinitial.R;
@@ -23,8 +25,6 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
 
     private Context context;
     private List mList;
-
-    private boolean isClick = true;
 
     public MainActivityAdapter(Context context, List<?> list) {
         this.context = context;
@@ -44,6 +44,8 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
             holder.rlChild.setVisibility(View.GONE);
             ParentEntity parentEntity = (ParentEntity) mList.get(position);
             holder.tvParent.setText(parentEntity.getName());
+
+            holder.tvCount.setText("" + parentEntity.getCount());
 //            holder.imageView.setImageResource(R.mipmap.right);
         }else{
             holder.rlChild.setVisibility(View.VISIBLE);
@@ -52,6 +54,8 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
             holder.tvChild.setText(childEntity.getName());
 //            holder.imageView.setImageResource(R.mipmap.down);
         }
+//        ParentEntity parent = (ParentEntity) mList.get(position);
+
 
         if (onItemClickListener != null){
             holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +104,7 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
         private TextView tvParent;
         private TextView tvChild;
         private ImageView imageView;
+        private TextView tvCount;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -108,6 +113,7 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
             tvChild = (TextView)itemView.findViewById(R.id.tv_child);
             rlChild = (RelativeLayout)itemView.findViewById(R.id.rl_child);
             imageView = (ImageView)itemView.findViewById(R.id.iv_item_right);
+            tvCount = (TextView)itemView.findViewById(R.id.tv_count);
         }
     }
 

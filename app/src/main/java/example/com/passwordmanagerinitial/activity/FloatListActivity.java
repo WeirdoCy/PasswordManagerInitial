@@ -65,7 +65,7 @@ public class FloatListActivity extends AppCompatActivity {
         adapter.setOnItemClickListener(new FloatListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                Intent intent = new Intent(FloatListActivity.this,AddPasswordActivity.class);
+                Intent intent = new Intent(FloatListActivity.this,BankCardActivity.class);
                 intent.putExtra("account",passwordList.get(position).getPassDescribe());
                 startActivity(intent);
             }

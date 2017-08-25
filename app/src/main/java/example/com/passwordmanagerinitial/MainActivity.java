@@ -181,6 +181,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (bank != null){
                 parent.setName("银行");
                 parent.setChildren(childList);
+                parent.setCount(childList.size());
                 list.add(parent);
 
             }
@@ -199,6 +200,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (webSet != null){
                 parent.setName("网站");
                 parent.setChildren(childList);
+                parent.setCount(childList.size());
                 list.add(parent);
             }
         }
@@ -217,6 +219,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (cloudDate != null){
                 parent.setName("云服务");
                 parent.setChildren(childList);
+                parent.setCount(childList.size());
                 list.add(parent);
             }
         }
@@ -236,6 +239,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (entertainmentData != null){
                 parent.setName("娱乐");
                 parent.setChildren(childList);
+                parent.setCount(childList.size());
                 list.add(parent);
             }
         }
@@ -255,6 +259,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (databaseData != null){
                 parent.setName("数据库");
                 parent.setChildren(childList);
+                parent.setCount(childList.size());
                 list.add(parent);
             }
         }
@@ -273,6 +278,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (oftenData != null){
                 parent.setName("常用密码");
                 parent.setChildren(childList);
+                parent.setCount(childList.size());
                 list.add(parent);
             }
         }
@@ -290,6 +296,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (otherData != null){
                 parent.setName("其他");
                 parent.setChildren(childList);
+                parent.setCount(childList.size());
                 list.add(parent);
             }
         }

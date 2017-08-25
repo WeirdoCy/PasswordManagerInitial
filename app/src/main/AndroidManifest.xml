@@ -34,6 +34,7 @@
         <activity android:name=".activity.FingerLoginActivity"/>
         <activity android:name=".activity.PicLoginActivity"/>
         <activity android:name=".activity.FaceLoginActivity"/>
+        <activity android:name=".activity.BankCardActivity"/>
 
     </application>
 

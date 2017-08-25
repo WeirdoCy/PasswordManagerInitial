@@ -10,4 +10,5 @@
     <color name="line">#474747</color>
     <color name="llBackground">#37393b</color>
     <color name="floatBtnColor">#bcbcbc</color>
+    <color name="listBorder">#FFB5B5B5</color>
 </resources>

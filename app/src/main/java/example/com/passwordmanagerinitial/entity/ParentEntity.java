@@ -10,6 +10,15 @@ public class ParentEntity {
 
     private String name;
     private List<ChildEntity> children;
+    private int count;
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
 
     public String getName() {
         return name;
