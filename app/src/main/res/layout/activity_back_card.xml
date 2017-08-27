@@ -74,6 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:background="@null"
+                android:gravity="center"
                 android:layout_toRightOf="@+id/tv_account_card"
                 />
             <View
@@ -102,6 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:background="@null"
+                android:gravity="center"
                 android:layout_toRightOf="@+id/tv_password_bank"
                 />
             <ImageView

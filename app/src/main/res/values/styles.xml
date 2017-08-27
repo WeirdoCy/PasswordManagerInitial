@@ -16,6 +16,10 @@
         <item name="colorAccent">@color/floatBtnColor</item>
     </style>
 
+    <style name="SeekBarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorAccent">@color/listBorder</item>
+    </style>
+
     <style name="Transparent" parent="Theme.AppCompat.Light">
         <item name="android:windowIsTranslucent">true</item><!--透明-->
         <item name="android:backgroundDimEnabled">true</item><!--模糊-->

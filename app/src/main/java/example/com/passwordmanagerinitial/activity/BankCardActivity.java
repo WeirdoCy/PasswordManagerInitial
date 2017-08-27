@@ -1,6 +1,7 @@
 package example.com.passwordmanagerinitial.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.internal.BottomNavigationItemView;
@@ -9,12 +10,14 @@ import android.support.v7.widget.ButtonBarLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +27,7 @@ import example.com.passwordmanagerinitial.R;
 import example.com.passwordmanagerinitial.adapter.BankCardListAdapter;
 import example.com.passwordmanagerinitial.util.ExitApplicationUtil;
 import example.com.passwordmanagerinitial.util.OpenPopupWindow;
+import example.com.passwordmanagerinitial.util.SoftInputUtil;
 
 /**
  * Created by Administrator on 2017/8/23.
@@ -61,7 +65,18 @@ public class BankCardActivity extends AppCompatActivity{
 
         initView();
         initPopView();
-//        initListener();
+        initListener();
+    }
+
+    private void initListener() {
+
+        ivKey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context,AutoGeneratePasswordActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initPopView() {
@@ -77,19 +92,18 @@ public class BankCardActivity extends AppCompatActivity{
                 recyclerView.setAdapter(adapter);
                 popupWindow.showPopWindow(llBankList,popView,llBankList.getWidth());
 
+                adapter.setOnItemClickListener(new BankCardListAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(int position) {
+                        tvBank.setText(mList.get(position).toString());
+                        popupWindow.hidePopupWindow();
+                    }
+                });
             }
         });
-    }
 
-    private void initListener() {
 
-        adapter.setOnItemClickListener(new BankCardListAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(int position) {
-                tvBank.setText(mList.get(position));
-                popupWindow.hidePopupWindow();
-            }
-        });
+
     }
 
     private void initData() {
@@ -118,5 +132,12 @@ public class BankCardActivity extends AppCompatActivity{
         btnSure = (Button)this.findViewById(R.id.btn_bank_sure);
 
         tvBank = (TextView)this.findViewById(R.id.tv_bank_list);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        SoftInputUtil util = new SoftInputUtil();
+        util.HideSoftInput(this,event);
+        return super.onTouchEvent(event);
     }
 }

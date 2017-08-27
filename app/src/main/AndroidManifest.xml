@@ -35,6 +35,7 @@
         <activity android:name=".activity.PicLoginActivity"/>
         <activity android:name=".activity.FaceLoginActivity"/>
         <activity android:name=".activity.BankCardActivity"/>
+        <activity android:name=".activity.AutoGeneratePasswordActivity" android:theme="@style/Transparent" android:label="生成密码"/>
 
     </application>
 

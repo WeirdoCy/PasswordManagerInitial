@@ -48,10 +48,12 @@ public class FloatListActivity extends AppCompatActivity {
 
         manager = getWindowManager();
         Display display = manager.getDefaultDisplay();
+
         WindowManager.LayoutParams layoutParams = getWindow().getAttributes();
         layoutParams.height = (int) (display.getHeight() * 0.95);
         layoutParams.width = (int) (display.getWidth() * 0.8);
         layoutParams.gravity = Gravity.CENTER_VERTICAL;
+
         getWindow().setAttributes(layoutParams);
 
         appUtil = ExitApplicationUtil.getInstance();

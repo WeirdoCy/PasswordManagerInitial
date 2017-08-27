@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -36,16 +37,12 @@ public class BankCardListAdapter extends RecyclerView.Adapter<BankCardListAdapte
 
         holder.textView.setText(mList.get(position));
 
-        if (onItemClickListener != null){
-
-            holder.textView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    onItemClickListener.onItemClick(position);
-                }
-            });
-
-        }
+        holder.textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickListener.onItemClick(position);
+            }
+        });
 
     }
 
@@ -74,4 +71,5 @@ public class BankCardListAdapter extends RecyclerView.Adapter<BankCardListAdapte
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
     }
+
 }
