@@ -8,8 +8,10 @@
     <color name="textColorSelect">#FFFFFFFF</color>
     <color name="textColorLight">#FF969595</color>
     <color name="line">#474747</color>
+    <color name="lineLight">#FFD1D1D1</color>
     <color name="llBackground">#37393b</color>
     <color name="floatBtnColor">#bcbcbc</color>
     <color name="listBorder">#FFB5B5B5</color>
     <color name="popBackground">#FF303030</color>
+    <color name="starColor">#FF009587</color>
 </resources>

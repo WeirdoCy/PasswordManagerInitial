@@ -44,14 +44,13 @@ public class AutoGeneratePasswordActivity extends AppCompatActivity {
         getWindow().setAttributes(params);
 
         exitUtil = ExitApplicationUtil.getInstance();
-        exitUtil.addActivity(AutoGeneratePasswordActivity.this);
+        exitUtil.addActivity(this);
 
     }
-
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN){
-            if (this.getCurrentFocus() != null && this.getCurrentFocus().getWindowToken() != null){
+            if (getCurrentFocus() != null){
                 exitUtil.removeActivity(this);
             }
         }

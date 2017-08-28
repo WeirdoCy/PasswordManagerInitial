@@ -33,8 +33,6 @@ public class FloatListActivity extends AppCompatActivity {
     private FloatListAdapter adapter;
     private ExitApplicationUtil exitApplicationUtil;
 
-    private ExitApplicationUtil appUtil;
-
     private WindowManager manager;
 
     @Override
@@ -56,8 +54,6 @@ public class FloatListActivity extends AppCompatActivity {
 
         getWindow().setAttributes(layoutParams);
 
-        appUtil = ExitApplicationUtil.getInstance();
-        appUtil.addActivity(this);
         initView();
         initListenerEvent();
     }
